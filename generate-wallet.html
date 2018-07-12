@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Phore Paper Wallet Generator</title>
+	<title>Chronos Paper Wallet Generator</title>
 	<!--
     
 Notice of Copyrights and Licenses:
@@ -44,23 +44,23 @@ Notice of Copyrights and Licenses:
 	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	GitHub Repository: https://github.com/phoreproject/Paper-Wallet.git
+	GitHub Repository: https://github.com/CyberSensei1/Paper-Wallet.git
 	-->
 
 	<meta charset="utf-8">
 
 <script type="text/javascript">
 
-// Basic initialization and switching for Phore to Bitcoin
+// Basic initialization and switching for Chronos to Bitcoin
 function setCryptoCurrency(toThis) {
 	window.currencyName = toThis;
 	switch (toThis)
 	{
-	case 'Phore':	
-	  window.networkVersion = 0x37;
-	  window.privateKeyPrefix = 0xD4;
+	case 'Chronos':	
+	  window.networkVersion = 0x1c;
+	  window.privateKeyPrefix = 0x4b;
 	  window.WIFPrefix = '8';
-	  window.compressedWIFPrefix = '[Y]';
+	  window.compressedWIFPrefix = 'X';
 	  break;
 	case 'Bitcoin':
 		window.networkVersion = 0x00;
@@ -70,8 +70,8 @@ function setCryptoCurrency(toThis) {
 		document.title = 'Bitcoin paper wallet generator';
 		break;
 	default:
-	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to Phore.');
-	  setCryptoCurrency('Phore');		
+	  alert ('Invalid cryptocurrency "' + toThis + '" at initialization. Defaulting to Chronos.');
+	  setCryptoCurrency('Chronos');		
 	} // eof switch
 	return (true);
 }
@@ -91,7 +91,7 @@ switch (myDesign) {
 		setCryptoCurrency('Bitcoin');
 		break;
 	default:
-	setCryptoCurrency('Phore');
+	setCryptoCurrency('Chronos');
 	window.suppliesURL = 'https://bitcoinpaperwallet.com/#purchase'; // remove special currency flag
 } 
 
@@ -9896,7 +9896,7 @@ Bitcoin.Util = {
 		}
 		
 		.right { text-align: right; }
-		.walletarea { display: none; border-top: 2px solid #00cd8c; } /* Phore 'Purple' #00cd8c */
+		.walletarea { display: none; border-top: 2px solid #7E3FC3; } /* Chronos 'Purple' #7E3FC3 */
 		.keyarea { font-family: Courier New; height: 110px; text-align: left; position: relative; padding: 5px; }
 		.keyarea .public { float: left; }
 		.keyarea .pubaddress { display: inline-block; height: 40px; padding: 0 0 0 10px; float: left; }
@@ -9908,22 +9908,22 @@ Bitcoin.Util = {
 		.pubkeyhex { word-wrap: break-word; }
 		.faqs ol { padding: 0 0 0 25px; }
 		.faqs li { padding: 3px 0; }
-		body { margin-top: 0; font-family: Arial; background-image:url(images/webpage-background.png); background-repeat: repeat-y; background-position: center; background-color: #01a66c; font-size: 14px;}
+		body { margin-top: 0; font-family: Arial; background-image:url(images/webpage-background.png); background-repeat: repeat-y; background-position: center; background-color: #7E3FC3; font-size: 14px;}
 		
-		h1 { font-size: 24px; font-weight: 100; color: #01a66c; margin:0 0 10px 0; padding:0; }
+		h1 { font-size: 24px; font-weight: 100; color: #7E3FC3; margin:0 0 10px 0; padding:0; }
 		
-		a, a:visited { text-decoration: none; color: #00cd8c; } /* Phore 'Purple' #00cd8c */
+		a, a:visited { text-decoration: none; color: #7E3FC3; } /* Chronos 'Purple' #7E3FC3 */
 		a:hover {color: #0000FF; text-decoration: underline;} /* Royal Blue */
 
 
-		#generatelabelmovemouse { background-color:#01a66c; position: absolute; z-index: 20; top: -10px; left: 0; margin: 0;  padding: 25px 55px; width: 901px; text-align: left;
+		#generatelabelmovemouse { background-color:#7E3FC3; position: absolute; z-index: 20; top: -10px; left: 0; margin: 0;  padding: 25px 55px; width: 901px; text-align: left;
 		-webkit-box-shadow: #B3B3B3 1px 0px 1px; -moz-box-shadow: #B3B3B3 1px 0px 1px; box-shadow: #B3B3B3 1px 0px 1px; }
 
 		#generate { height: 450px; text-align: left; position: relative; padding: 5px; border: none; line-height: 24px;}
 		
 		#generate input { font-size: 10px; }
 		
-		#papergenerate1 { font-weight: bold; color: #01a66c; }
+		#papergenerate1 { font-weight: bold; color: #7E3FC3; }
 		.helpDivider { display: block; border-bottom: 1px dotted #999999; margin: 10px 0; }
 		.helpTitle { color: #029B15; font-size: 120%;}
 		#generatelabelbitcoinaddress { font-size: 90%;}
@@ -9937,9 +9937,9 @@ Bitcoin.Util = {
 
 		#rightArea { float: right; width: 170px; }
  
-		#progress-bar { width: 170px; background:#01a66c; position: relative; margin-bottom: 20px; } 
+		#progress-bar { width: 170px; background:#7E3FC3; position: relative; margin-bottom: 20px; } 
 		.fullyRounded { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; } 
-		#progress-bar-percentage { background:#00cd8c; padding: 3px 0px; text-align: center; height: 18px; } 
+		#progress-bar-percentage { background:#7E3FC3; padding: 3px 0px; text-align: center; height: 18px; } 
 		#progress-bar-percentage span { display: inline-block; position: absolute; width: 100%; left: 0; }
 				
 		#main { position: relative; margin: 0px auto; width: 1010px; color: #000000; } /* removed text-align: center; */
@@ -9953,22 +9953,22 @@ Bitcoin.Util = {
 		#culturemenu .selected { text-decoration: none; color: #000000; }
 
 		#calibratearea .calibratesvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
-		#calibratearea #calibrationinfo { clear: both; text-align: center; color: #01a66c; padding: 10px 0;}
+		#calibratearea #calibrationinfo { clear: both; text-align: center; color: #7E3FC3; padding: 10px 0;}
 		
 		#backarea .commands, #paperarea .commands { height: 120px; } /* identical so back and front line up */
 			
 		#backarea .backsvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
 
-		#printeradjust { color: #01a66c; font-size: 12px; }
-		#printeradjust span { background-color: #ffffff; padding: 2px 3px; border: 1px solid #00cd8c; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 12px;}
+		#printeradjust { color: #7E3FC3; font-size: 12px; }
+		#printeradjust span { background-color: #ffffff; padding: 2px 3px; border: 1px solid #7E3FC3; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 12px;}
 		#printeradjust a:hover span { background-color: #eeeeee; }
 		#printeradjust a, #printeradjust a:hover {text-decoration: none;}
 		#printeradjust input { text-align: center; margin: 0 2px; width: 20px;}
 		
-		#detailwallet { margin-left: 35px; color: #00cd8c; }
+		#detailwallet { margin-left: 35px; color: #7E3FC3; }
 		
 		#paperarea { min-height: 120px; display: none; }
-		#paperarea .keyarea { border: 2px solid #00cd8c; border-top: 0; }
+		#paperarea .keyarea { border: 2px solid #7E3FC3; border-top: 0; }
 		
 		/* alphanum for public-private keys*/
 		#paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: ubuntu_mono_bold, Arial, Helvetica, sans-serif; padding: 0; margin: 0; font-size: 13px;}
@@ -10097,13 +10097,13 @@ Bitcoin.Util = {
 		#backText #backCustomMessage { display: none; position: absolute; overflow: hidden; margin-left: 210px; width: 195px; margin-top: 20px; font-size: 11px; line-height: 15px; height: 150px; }
 
 		.nicerButton { /* thanks http://www.cssbuttongenerator.com */
-			-moz-box-shadow:inset 0px 1px 0px 0px #01a66c;
-			-webkit-box-shadow:inset 0px 1px 0px 0px #01a66c;
-			box-shadow:inset 0px 1px 0px 0px #01a66c;
-			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #01a66c), color-stop(1, #01a66c) );
-			background:-moz-linear-gradient( center top, #01a66c 5%, #01a66c 100% );
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01a66c', endColorstr='#01a66c');
-			background-color:#01a66c;
+			-moz-box-shadow:inset 0px 1px 0px 0px #7E3FC3;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #7E3FC3;
+			box-shadow:inset 0px 1px 0px 0px #7E3FC3;
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7E3FC3), color-stop(1, #7E3FC3) );
+			background:-moz-linear-gradient( center top, #7E3FC3 5%, #7E3FC3 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7E3FC3', endColorstr='#7E3FC3');
+			background-color:#7E3FC3;
 			-webkit-border-top-left-radius:12px;
 			-moz-border-radius-topleft:12px;
 			border-top-left-radius:12px;
@@ -10117,7 +10117,7 @@ Bitcoin.Util = {
 			-moz-border-radius-bottomleft:12px;
 			border-bottom-left-radius:12px;
 			text-indent:0;
-			border:1px solid #01a66c;
+			border:1px solid #7E3FC3;
 			display:inline-block;
 			color:#ffffff !important;
 			font-family:Arial;
@@ -10129,13 +10129,13 @@ Bitcoin.Util = {
 			width:189px;
 			text-decoration:none;
 			text-align:center;
-			text-shadow:1px 1px 0px #01a66c;
+			text-shadow:1px 1px 0px #7E3FC3;
 		}
 		.nicerButton:hover {
-		  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00cd8c), color-stop(1, #00cd8c) );
-		  background:-moz-linear-gradient( center top, #00cd8c 5%, #00cd8c 100% );
-		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cd8c', endColorstr='#00cd8c');
-		  background-color:#00cd8c;
+		  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7E3FC3), color-stop(1, #7E3FC3) );
+		  background:-moz-linear-gradient( center top, #7E3FC3 5%, #7E3FC3 100% );
+		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7E3FC3', endColorstr='#7E3FC3');
+		  background-color:#7E3FC3;
 		  text-decoration: none;
 		}.nicerButton:active {
 			position:relative;
@@ -10257,10 +10257,10 @@ Bitcoin.Util = {
 			.menu { text-align: left; }
 			.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #E7E5E6; 
 						 color: #0977b2; font-size: 12px;
-						 border-top: 2px solid #00cd8c; 
-						 border-left: 2px solid #00cd8c; 
-						 border-right: 2px solid #00cd8c; 
-						 border-bottom: 2px solid #01a66c; 
+						 border-top: 2px solid #7E3FC3; 
+						 border-left: 2px solid #7E3FC3; 
+						 border-right: 2px solid #7E3FC3; 
+						 border-bottom: 2px solid #7E3FC3; 
 						 padding: 4px 8px; margin: 0 2px 0 0; position: relative; top: 2px; z-index: 110; cursor: pointer; }
 			.menu .tab:hover { color: #2B2CFF; }
 			.menu .tab.selected { background-color: #FFF; border-bottom: 4px solid #FFF; cursor: default; font-weight: bold; }
@@ -10434,10 +10434,10 @@ Bitcoin.Util = {
 								  switch(window.location.protocol) {
 									 case 'http:':
 									 case 'https:':
-									   document.write('<span style="color: #01a66c;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
+									   document.write('<span style="color: #7E3FC3;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
 									   break;
 									 case 'file:':
-									   document.write('<span style="color: #01a66c;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
+									   document.write('<span style="color: #7E3FC3;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
 									   break;
 									 default: 
 								  }
@@ -10447,9 +10447,9 @@ Bitcoin.Util = {
 	                        <li>
 		                        <script language="javascript">
 								  if (window.crypto && window.crypto.getRandomValues) {
-										 document.write('<span style="color: #01a66c;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
+										 document.write('<span style="color: #7E3FC3;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
 								  } else {
-										 document.write('<span style="color: #01a66c;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
+										 document.write('<span style="color: #7E3FC3;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
 								  }
 								</script>
 	                        </li>
@@ -10461,7 +10461,7 @@ Bitcoin.Util = {
 						<span id="instructions2">
                         <!-- <p style="margin-top: 0;"><strong>Select the wallet you want to create</strong>
                           <select name="designPicker" id="designPicker" style="font-size: 12px;" onChange="setDesign(this.value, false);">
-                            <option value="default">Phore Paper Wallet</option>
+                            <option value="default">Chronos Paper Wallet</option>
                             
                           </select>
                           <select name="langPicker" id="langPicker" style="font-size: 12px; display: inline;" onChange="setDesign('default', false, this.value);">
@@ -10627,36 +10627,36 @@ Bitcoin.Util = {
                   Denomination: 
                   <select id="backDenominationSelect" onChange="setDenomination(this.value);">
                     <option value="">*** None ***</option>
-                    <option value="10000 PHR">10000 PHR</option>
-                    <option value="5000 PHR">5000 PHR</option>
-                    <option value="2000 PHR">2000 PHR</option>
-                    <option value="1000 PHR">1000 PHR</option>
-                    <option value="50000 mPHR">50000 mPHR</option>
-                    <option value="10000 mPHR">10000 mPHR</option>
-                    <option value="5000 mPHR">5000 mPHR</option>
-                    <option value="1000 mPHR">1000 mPHR</option>
-                    <option value="500 mPHR">500 mPHR</option>
-                    <option value="100 mPHR">100 mPHR</option>
-                    <option value="50000 yPHR">50000 yPHR</option>
-                    <option value="10000 yPHR">10000 yPHR</option>
-                    <option value="5000 yPHR">5000 yPHR</option>
-                    <option value="1000 yPHR">1000 yPHR</option>
-                    <option value="500 yPHR">500 yPHR</option>
-                    <option value="100 yPHR">100 yPHR</option>
-                    <option value="50 yPHR">50 yPHR</option>
-                    <option value="20 yPHR">20 yPHR</option>
-                    <option value="10 yPHR">10 yPHR</option>
-                    <option value="5 yPHR">5 yPHR</option>
-                    <option value="1 yPHR">1 yPHR</option>
+                    <option value="10000 CRN">10000 CRN</option>
+                    <option value="5000 CRN">5000 CRN</option>
+                    <option value="2000 CRN">2000 CRN</option>
+                    <option value="1000 CRN">1000 CRN</option>
+                    <option value="50000 mCRN">50000 mCRN</option>
+                    <option value="10000 mCRN">10000 mCRN</option>
+                    <option value="5000 mCRN">5000 mCRN</option>
+                    <option value="1000 mCRN">1000 mCRN</option>
+                    <option value="500 mCRN">500 mCRN</option>
+                    <option value="100 mCRN">100 mCRN</option>
+                    <option value="50000 yCRN">50000 yCRN</option>
+                    <option value="10000 yCRN">10000 yCRN</option>
+                    <option value="5000 yCRN">5000 yCRN</option>
+                    <option value="1000 yCRN">1000 yCRN</option>
+                    <option value="500 yCRN">500 yCRN</option>
+                    <option value="100 yCRN">100 yCRN</option>
+                    <option value="50 yCRN">50 yCRN</option>
+                    <option value="20 yCRN">20 yCRN</option>
+                    <option value="10 yCRN">10 yCRN</option>
+                    <option value="5 yCRN">5 yCRN</option>
+                    <option value="1 yCRN">1 yCRN</option>
                     <option value="other">Other...</option>
                   </select>
                   <div id="backDenominationOther" style="display: none;">
                   <input id="backDenominationOtherAmount" maxlength="5" size="6" value="1" onChange="setDenomination('other');">
                   <select id="backDenominationOtherUnit" onChange="setDenomination('other');">
-                    <option value="PHR">PHR</option>
-                  	<option value="yPHR">yPHR</option>
-                  	<option value="&mu;PHR">&mu;PHR</option>
-                  	<option value="mPHR">mPHR</option>
+                    <option value="CRN">CRN</option>
+                  	<option value="yCRN">yCRN</option>
+                  	<option value="&mu;CRN">&mu;CRN</option>
+                  	<option value="mCRN">mCRN</option>
                   </select>
                   </div><!-- end backDenominationOther -->
                               </div>
@@ -10710,7 +10710,7 @@ Bitcoin.Util = {
                   </div><!-- end backLongText -->
                 </div><!-- end backText -->
 
-				<img id="backsvg1" class="backsvg" src="./images/back-300dpi-PHR.jpg">
+				<img id="backsvg1" class="backsvg" src="./images/back-300dpi-CRN.jpg">
 			</div><!-- end backarea -->
 
 
@@ -10755,7 +10755,7 @@ Bitcoin.Util = {
                         
 						<h1><span id="instructions18">How to withdraw funds from your wallet:</span></h1>
 
-						<span id="instructions19">You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. a Phore Wallet or Bitcoin wallet application or online service like blockchain.info or coinbase.com.
+						<span id="instructions19">You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. a Chronos Wallet or Bitcoin wallet application or online service like blockchain.info or coinbase.com.
                         <br />
                         <br />
                         <strong>If you elected to BIP38-encrypt your wallet</strong>, you may need to recover your unencrypted WIF "Wallet Import Format" private key by using the "validate" tab on this web page.
@@ -10780,7 +10780,7 @@ Bitcoin.Util = {
 			<div class="instructionsarea">	
 					<h1>Validate or decrypt private key</h1>
 					<div style="width: 45%; float: left; padding: 0 15px; border-right: 3px solid #ccc;">
-                    	<p><em>This feature works for private keys made here as well as those generated using any other Phore or Bitcoin service or software, e.g. bitaddress.org or brainwallet.org</em></p>
+                    	<p><em>This feature works for private keys made here as well as those generated using any other Chronos or Bitcoin service or software, e.g. bitaddress.org or brainwallet.org</em></p>
 						<p><strong>Enter or <a onClick="ninja.wallets.detailwallet.qrscanner.start()">scan</a> any private key to verify that the key is valid</strong> and show its corresponding public key. If your private key validates, then you may be reassured that you will able to retrieve any funds sent to that wallet.</p>
 						<p><strong>To duplicate or BIP38-encrypt any paper wallet</strong>, just validate its private key and click the "Use these details to print a paper wallet" button.</p>
  						<p><strong>Is your wallet BIP38 encrypted?</strong> If so, you can use this form to decrypt your private key and recover the standard Wallet Import Format (WIF) key suitable for wallet software and services that don't directly support BIP38 importing.</p>
@@ -10901,16 +10901,16 @@ Bitcoin.Util = {
 				<div>
 					<span class="item" id="footerlabeldonations"><b>Donations keep this service open &amp; free!</b></span>
                     <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-                    <strong>Bitcoin</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16NZTDjBQfTzFdBfwaS2JGBkfgTFTVZxAp<br />
-                    <strong>Phore</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PSNp3LDTsvUdrPwV5o5YracEhzAD9ce4aB<br /></span>
+                    <strong>Bitcoin</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1QEGVP1YRatSfWdmxfMSMYfRLhJysBkPzC<br />
+                    <strong>Chronos</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUR5bmWoXksNu4ooYquEgDDmBjLK4ntbU9<br /></span>
 
 
 				</div>
 			</div>
 
             	<span class="item"><b>Security</b></span>
-                <span class="item" style="font-size: 90%;">For secure wallet generation, do not print wallets "live" from paper.phore.io<br />Instead, download this generator from GitHub and run the HTML as a "local" file:</span>
-				<span class="item"><a href="https://github.com/phoreproject/Paper-Wallet" target="_blank" id="footerlabelgithub"><strong>Secure Download</strong> (GitHub ZIP file)</a></span>
+                <span class="item" style="font-size: 90%;">For secure wallet generation, do not print wallets "live" from paper.Chronos.io<br />Instead, download this generator from GitHub and run the HTML as a "local" file:</span>
+				<span class="item"><a href="https://github.com/Chronosproject/Paper-Wallet" target="_blank" id="footerlabelgithub"><strong>Secure Download</strong> (GitHub ZIP file)</a></span>
                 
                 
 			</div>
@@ -11374,7 +11374,7 @@ ninja.publicKey = {
 			pointColor = 255 - Math.ceil(110 * percentageComplete);
 			// COIN-SERVER changed to a fixed color
 			//div.style.backgroundColor = '#' + pointColor.toString(16) + 'FF' + pointColor.toString(16);
-			div.style.backgroundColor = '#00cd8c';
+			div.style.backgroundColor = '#7E3FC3';
 			div.style.width = pointSize;
 			div.style.height = pointSize;
 			
@@ -11578,7 +11578,7 @@ ninja.publicKey = {
 		translations: {
 			"en": {
 				// javascript alerts or messages
-				"paperlabelbitcoinaddress": "Phore:",
+				"paperlabelbitcoinaddress": "Chronos:",
 				"paperlabelprivatekey": "Private Key (Wallet Import Format):",
 				"paperlabelencryptedkey": "Encrypted Private Key (Password required)",
 				"bip38alertpassphraserequired": "Passphrase required for BIP38 key",
@@ -13432,14 +13432,14 @@ function setDesign (whichDesign, isOnLoad, whichLanguage) {
 			walletImportFormat: "WALLET IMPORT FORMAT",
 			withdraw: "PRIVATE KEY / WITHDRAW",
 			backLongTextFontSize: "9px",
-			backPaperWallet: "Phore PAPER WALLET",
+			backPaperWallet: "Chronos PAPER WALLET",
 			backAmount: "Amount Added",
 			backDate: "Date",
 			backNotes: "Notes:",
-			backInst1: "To deposit additional funds to this paper wallet, send PHR's to its public address, anytime.",
+			backInst1: "To deposit additional funds to this paper wallet, send CRN's to its public address, anytime.",
 			backInst2: "Verify your balance by searching for the public address using https://chainz.cryptoid.info/phr/",
 			backInst3: "<strong>Do not reveal the private key</strong> until you are ready to import the balance on this wallet to a bitcoin client, exchange, or online wallet.",
-			backInst4: "When withdrawing your funds from this wallet you should remove the <strong>ENTIRE BALANCE</strong>. If you attempt to spend only some of the funds you will likely lose the remaining PHR's forever.<br />",
+			backInst4: "When withdrawing your funds from this wallet you should remove the <strong>ENTIRE BALANCE</strong>. If you attempt to spend only some of the funds you will likely lose the remaining CRN's forever.<br />",
 		}
 
 /*		'chinese': {
@@ -13722,8 +13722,8 @@ function setDesign (whichDesign, isOnLoad, whichLanguage) {
 	// now deal with JPG-style backgrounds, and apply instructions to default design
 
 	if (whichDesign == 'default') {
-		var myFront = './images/front-300dpi-PHR.jpg';
-		var myBack = './images/back-300dpi-PHR.jpg';
+		var myFront = './images/front-300dpi-CRN.png';
+		var myBack = './images/back-300dpi-CRN.jpg';
 		var myPreview = './images/finished-sample-sealed.jpg';
 		// setup proper back text translation & controls
 		document.getElementById('backTextControl').style.display='block';
@@ -13786,7 +13786,7 @@ function setDenomination(valueAndUnit) {
 }
 
 // disable unit testing if we are not working with regular old bitcoin
-if (window.currencyName != 'Phore') document.getElementById('footerlabeltests').style.display='none';
+if (window.currencyName != 'Chronos') document.getElementById('footerlabeltests').style.display='none';
 </script>
 
 </body>
